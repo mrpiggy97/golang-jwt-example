@@ -5,7 +5,8 @@ import (
 	"net/http"
 )
 
-func Runserver(server http.Server) {
-	fmt.Printf("server listening at address %v\n", server.Addr)
-	server.ListenAndServe()
+func Runserver() {
+	var mainServer http.Server = GetServer()
+	fmt.Printf("server listening at address %v\n", mainServer.Addr)
+	mainServer.ListenAndServe()
 }
