@@ -34,7 +34,7 @@ func CreateJwtToken(writer http.ResponseWriter, req *http.Request, params httpro
 				Name:     incomingUser.Name,
 			},
 			RegisteredClaims: jwt.RegisteredClaims{
-				ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Second * 60)),
+				ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Second * 5)),
 			},
 		}
 
